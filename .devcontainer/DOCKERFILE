@@ -1,0 +1,38 @@
+# Do not change this please (start)
+ARG ROS_DISTRO
+# Do not change this please (stop)
+
+#  Initiate package
+FROM ros:${ROS_DISTRO}-ros-core
+
+# Do not change this please (start)
+ARG USERNAME
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+# Do not change this please (stop)
+
+# Environment adjustments
+ENV SHELL=/bin/bash
+
+# Add sudoer
+RUN apt-get update
+RUN apt-get install -y sudo
+
+# Delete user if it exists in container (e.g Ubuntu Noble: ubuntu)
+RUN if id -u $USER_UID ; then userdel `id -un $USER_UID` ; fi
+
+# Create the user
+RUN groupadd --gid $USER_GID ${USERNAME}
+RUN useradd --uid $USER_UID --gid $USER_GID -m ${USERNAME}
+RUN echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME}
+RUN chmod 0440 /etc/sudoers.d/${USERNAME}
+RUN apt-get update && apt-get upgrade -y
+
+# python pip install
+RUN apt-get install -y python3-pip
+
+# environment build
+USER ${USERNAME}
+
+# Start Environment
+CMD ["/bin/bash"]
