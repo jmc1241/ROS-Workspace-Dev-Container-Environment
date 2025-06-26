@@ -56,4 +56,38 @@ To be determined...
 We cannot support this repo yet...
 
 # Contact
-Author: Joshua Calzadillas
+- Author: Joshua Calzadillas
+- Email: jmc1241@usnh.edu
+
+# Tutorials (associated with installation & beyond)
+The purpose of the tutorials is to assist with any knowledge that may be missed based on other factors. Hopefully this helps. I will not update this. Good luck...
+
+## VSCode
+Extension Marketplace (step 2): 
+- https://code.visualstudio.com/docs/configure/extensions/extension-marketplace
+- https://code.visualstudio.com/docs/configure/extensions/extension-runtime-security (Security!!!!)
+
+Source Control:
+- https://code.visualstudio.com/docs/sourcecontrol/overview
+
+Integrated Terminal:
+- https://code.visualstudio.com/docs/terminal/getting-started
+
+CMake Tools:
+- https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/README.md
+
+## Docker
+What is it?:
+- https://docs.docker.com/get-started/docker-overview/
+
+Introduction:
+- https://docs.docker.com/get-started/introduction/
+
+Concepts:
+- https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/ (What is a container)
+
+Building Images (Very Important Here!):
+- https://docs.docker.com/get-started/docker-concepts/building-images/
+
+## ROS
+TODO
